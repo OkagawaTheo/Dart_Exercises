@@ -1,9 +1,10 @@
 
 
 void main() {
-  Pessoa pessoa1 = new Pessoa('Theo', 16, 16); // instanciar por esses parâmetros
+  Pessoa pessoa1 = new Pessoa('Theo', 16); // instanciar por esses parâmetros
   // pessoa1.nome = 'Marcos';
   // pessoa1.idade = 12; 
+  pessoa1.idadeEnv = pessoa1.idade;
   pessoa1.Envelhecer();
   pessoa1.ApresentarNome();
   
@@ -15,10 +16,10 @@ class Pessoa { // nome + idade e apresentar
   int? idade;
   int? idadeEnv;
 
-  Pessoa(this.nome, this.idade, this.idadeEnv); // obrig. as das duas var
+  Pessoa(this.nome, this.idade); // obrig. as das duas var
 
 void Envelhecer () => {
-  idadeEnv = this.idade! + 1, 
+  idadeEnv = this.idade! + 1, //adiciona "idade" + 1
   };
 
   void ApresentarNome() => {
